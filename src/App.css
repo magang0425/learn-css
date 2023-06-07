@@ -1,0 +1,158 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container div {
+    border: 1px solid orange;
+}
+
+.body {
+    background-image: url("https://p3-zeus.byteimg.com/img/tos-cn-i-tv0gyzr5fi/f7fff595cb9045e18c4d99202cdf2256.png~tplv-tv0gyzr5fi-image.image");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: scroll;
+}
+
+.item1 {
+    flex: 1;
+    order: 1;
+
+}
+
+.item3 {
+    flex: 2;
+    order: 2;
+}
+
+@keyframes change-color {
+    0% {
+        background-color: green
+    }
+    20% {
+        background-color: red
+    }
+    40% {
+        background-color: wheat
+    }
+    60% {
+        background-color: black
+    }
+    80% {
+        background-color: orchid
+    }
+    100% {
+        background-color: gray
+    }
+}
+
+.item5 {
+    animation-name: change-color;
+    animation-duration: 3s;
+    animation-iteration-count: 100;
+    animation-delay: 1s;
+
+}
+
+h1 {
+    color: gray;
+    text-align: center;
+}
+
+.p-border {
+   /* border-top-style: dashed;
+    border-left-style: dotted;
+    border-bottom-style: outset;
+    border-right-style: solid;
+    border-color: tomato;
+    border-radius: 10px;*/
+    padding-left: 40px;
+    max-width: 700px;
+    box-sizing: border-box;
+    outline-style: solid;
+}
+.weilei{
+    vertical-align: middle;
+    font-size: 19px;
+    text-decoration: line-through; /*下划线*/
+    text-transform: capitalize; /*首字母大写*/
+    text-indent: 30px;  /*首行文本缩进*/
+    letter-spacing: 2px; /*文字之间的间距*/
+    line-height: 40px;
+    word-spacing: 30px;
+    white-space: nowrap;
+    text-shadow: 2px 2px 5px red;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic; /*文本以倾斜显示*/
+    font-weight: lighter;
+    /*font-variant: small-caps;*/
+    overflow-x: auto;
+
+}
+a{
+    text-decoration: underline;
+    color: red;
+    background-color: black;
+
+
+}
+a:hover{
+    background-color: darkgreen;
+    display: inline-block;
+}
+ul{
+    list-style-type: upper-alpha;
+    background-color: gray;
+    padding-left: 60px;
+    /*list-style-position: outside;*/
+}
+li{
+    display: flex;
+    margin: 10px;
+}
+table,td{
+    border: 2px solid red;
+    border-collapse: collapse;
+    text-align: right;
+    vertical-align: bottom;
+    padding: 16px;
+}
+td:hover{
+    background-color: black;
+}
+tr:nth-child(even){
+    background-color: orchid;
+}
+.buttonClass{
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    box-shadow: 0px 20px 0px 0px greenyellow;
+    border-radius: 20px;
+}
+.divDisplay{
+    position: absolute;
+    border: 3px solid gray;
+    left: 100px;
+}
+.parent{
+    position: relative;
+}
+.child1{
+    position: sticky;
+    top: 10px;
+    background-color: red;
+    width: 20px;
+    overflow: visible;
+}
+.child2{
+
+}
+.child3 {
+
+}
+.flexbox-item{
+
+}

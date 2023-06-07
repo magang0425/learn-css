@@ -1,81 +1,128 @@
 import './App.css'
 
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 const App = () => {
-    const [totalSets, setTotalSets] = useState('');
-    const [buyXGetNRule, setBuyXGetNRule] = useState('');
-    const [buyYGetNRule, setbuyYGetNRule] = useState('');
-    const [buySets, setBuySets] = useState(0);
-    const [freeSets, setFreeSets] = useState(0);
 
-    const calculateSets = () => {
-        const buyCount= parseInt(buyXGetNRule);
-        const freeCount = parseInt(buyYGetNRule);
-        const total = parseInt(totalSets);
-
-        const quotient = Math.floor(total / (buyCount + freeCount));
-        const remainder = total % (buyCount + freeCount);
-
-        setBuySets(quotient * buyCount + Math.min(remainder, buyCount));
-        setFreeSets(quotient * freeCount + Math.max(remainder - buyCount, 0));
-    };
 
     return (
         <>
-            <div className="flex flex-col gap-2 m-16">
-                <p className="font-sans text-6xl text-center mb-10">
-                    小露露计算器
-                </p>
-                <div className="flex items-center">
-                    <label htmlFor="total-sets" className="mr-2">总套数：</label>
-                    <input
-                        id="total-sets"
-                        value={totalSets}
-                        onChange={e => setTotalSets(e.target.value)}
-                        className="border border-gray-400 p-1 rounded-md"
-                    />
-                </div>
+            <div>
+                {/*<img
+                    src="https://p3-zeus.byteimg.com/img/tos-cn-i-tv0gyzr5fi/f7fff595cb9045e18c4d99202cdf2256.png~tplv-tv0gyzr5fi-image.image"/>
 
-                <div className="flex items-center ">
-                    <label htmlFor="buy-x-get-n-rule" className="mr-2">购买规则：</label>
-                    <label htmlFor="buy-x-get-n-rule md:whitespace-pre" className="mr-2">买</label>
-                    <input
-                        id="buy-x-get-n-rule"
-                        value={buyXGetNRule}
-                        onChange={e => setBuyXGetNRule(e.target.value)}
-                        className="border border-gray-400 p-1 rounded-md mr-2"
-                    />
-                    <label htmlFor="buy-x-get-n-rule" className="mr-2">送</label>
-                    <input
-                        id="buy-y-get-n-rule"
-                        value={buyYGetNRule}
-                        onChange={e => setbuyYGetNRule(e.target.value)}
-                        className="border border-gray-400 p-1 rounded-md"
-                    />
-                </div>
-
-                <button
-                    onClick={calculateSets}
-                    className="bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500  rounded-full"
-                >
-                    计算
-                </button>
-
-                <div className="flex items-center">
-                    <label htmlFor="buy-sets" className="mr-2">购买套数：</label>
-                    <span id="buy-sets">{buySets}</span>
-                </div>
-
-                <div className="flex items-center">
-                    <label htmlFor="free-sets" className="mr-2">赠送套数：</label>
-                    <span id="free-sets">{freeSets}</span>
-                </div>
+                <p style={{position: 'relative', top: '60px'}}>this is a pic</p>
+                <div style={{
+                    opacity: '0.6',
+                    borderRadius: '20px 30 px',
+                    width: '100px',
+                    height: '200px',
+                    backgroundColor: 'red'
+                }}></div>
+                <p className="font-mono">this is a shirt</p>*/}
             </div>
+            <div className='container'>
+                <div className={'item3'}>div1</div>
+                <div className={'item1'}>div2</div>
+                <div className={'item5'}>div3</div>
+                <div className={'item5'}>div3</div>
+                <div className={'item5'}>div3</div>
+                <div className={'item5'}>div3</div>
+                <div className={'item5'}>div3</div>
+                <div className={'item5'}>div3</div>
+            </div>
+            <h1>h1 test</h1>
+            <p>p<em>testp</em></p>
+            <p>p<strong>testp</strong></p>
+            <p className={'p-border'}>p <em>testp</em> testp testp testp testp testp testp testp testp testp testp testp
+                testp testp testp testp test</p>
+            <ul>
+                <li>li1</li>
+                <li>li2</li>
+                <li>li3</li>
+                <li>li4</li>
+            </ul>
+            <ol>
+                <li>li1</li>
+                <li>li2</li>
+                <li>li3</li>
+                <li>li4</li>
+            </ol>
+            <dl>
+                <dt>dt1</dt>
+                <dd>dt1</dd>
+                <dd>dt1</dd>
+                <dd>dt1</dd>
+            </dl>
+            <p>this is code <code>java code</code></p>
+            <p>
+                According to the
+                <a href="/en-US/docs/Web/HTML/Element/blockquote">
+                    <cite>MDN blockquote page</cite></a>:
+            </p>
+            <address>
+                <p>
+                    Chris Mills<br/>
+                    Manchester<br/>
+                    The Grim North<br/>
+                    UK
+                </p>
 
-
-
-
+                <ul>
+                    <li>Tel: 0<sub>1</sub>2<sup>3</sup>4 567 890</li>
+                    <li>Email: me@grim-north.co.uk</li>
+                </ul>
+                <time dateTime="2016-01-20">20 January 2016</time>
+            </address>
+            {/* <img
+                srcSet={"https://p3-zeus.byteimg.com/img/tos-cn-i-tv0gyzr5fi/f7fff595cb9045e18c4d99202cdf2256.png~tplv-tv0gyzr5fi-image.image 2000w,https://p3-zeus.byteimg.com/img/tos-cn-i-tv0gyzr5fi/f7fff595cb9045e18c4d99202cdf2256.png~tplv-tv0gyzr5fi-image.image 1000w"}
+                src="https://p3-zeus.byteimg.com/img/tos-cn-i-tv0gyzr5fi/f7fff595cb9045e18c4d99202cdf2256.png~tplv-tv0gyzr5fi-image.image"/>
+*/}
+            <div className='weilei'>this is a weileierwrwerew
+                <br/>this is new word
+            </div>
+            <table>
+                <tr>
+                    <td>tr1</td>
+                    <td>tr2</td>
+                    <td>tr3</td>
+                    <td>tr4</td>
+                </tr>
+                <tr>
+                    <td>tr1</td>
+                    <td>tr2</td>
+                    <td>tr3</td>
+                    <td>tr4</td>
+                </tr>
+                <tr>
+                    <td>tr1</td>
+                    <td>tr2</td>
+                    <td>tr3</td>
+                    <td>tr4</td>
+                </tr>
+                <tr>
+                    <td>tr1</td>
+                    <td>tr2</td>
+                    <td>tr3</td>
+                    <td>tr4</td>
+                </tr>
+            </table>
+            {/*<div className="divDisplay">
+                <button className="buttonClass">button</button>
+            </div>*/}
+            <div className={"parent"}>
+                parent
+                <div className={"child1"}>child1</div>
+                <div className={"child2"}>child2</div>
+                <div className={"child3"}>child3</div>
+            </div>
+            <div className={"flexbox-container"}>
+                parent
+                <div className={"flexbox-item flexbox-item-1"}>flexbox-item-1</div>
+                <div className={"flexbox-item flexbox-item-2"}>flexbox-item-2</div>
+                <div className={"flexbox-item flexbox-item-3"}>flexbox-item-3</div>
+                <div className={"flexbox-item flexbox-item-4"}>flexbox-item-4</div>
+            </div>
         </>
     );
 };
