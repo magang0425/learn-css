@@ -116,6 +116,25 @@ const App = () => {
                 <div className={"child2"}>child2</div>
                 <div className={"child3"}>child3</div>
             </div>
+            //登录页面
+            <div className={"login-container"}>
+                <div className={"login-item"}>
+                    <div className={"login-item-title"}>登录
+                    </div>
+                    <div className={"login-item-content"}>
+                        <div className={"login-item-content-item"} >
+                            <input className={"login-item-content-item-input"} type="text" placeholder="联程小姜"/>
+                            <input className={"login-item-content-item-input"} type="password" placeholder="密码"/>
+                            <button className={"login-item-content-item-button"}>登录</button>
+                            <button className={"login-item-content-item-button"}>暂不登录</button>
+                            <button className={"login-item-content-item-button"}>暂不登录</button>
+                        </div>
+                        <div className={"login-item-content-item"}></div>
+                        </div>
+                        </div>
+                        
+                </div>
+
             <div className={"flexbox-container"}>
                 parent
                 <div className={"flexbox-item flexbox-item-1"}>flexbox-item-1</div>
